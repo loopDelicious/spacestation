@@ -1,0 +1,19 @@
+{
+  "name": "spacestation",
+  "version": "1.0.0",
+  "description": "new todo app for my spacestation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loopDelicious/spacestation.git"
+  },
+  "author": "Joyce Lin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loopDelicious/spacestation/issues"
+  },
+  "homepage": "https://github.com/loopDelicious/spacestation#readme"
+}

@@ -4,7 +4,8 @@
   "description": "new todo app for my spacestation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/loopDelicious/spacestation/issues"
   },
-  "homepage": "https://github.com/loopDelicious/spacestation#readme"
+  "homepage": "https://github.com/loopDelicious/spacestation#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
 }

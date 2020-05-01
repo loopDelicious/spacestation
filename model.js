@@ -1,14 +1,4 @@
-const { Client } = require('pg')
-
-const client = new Client({
-    // user: 'username',
-    // password: 'password',
-    host: 'localhost',
-    database: 'spacestation',
-    port: 5432
-})
-
-client.connect()
+const { client } = require('./database')
 
 const getTasks = (request, response) => {
     client.query('SELECT * FROM tasks ORDER BY id ASC', (error, result) => {
@@ -41,7 +31,8 @@ const createTask = (request, response) => {
 const updateTask = (request, response) => {
     const id = parseInt(request.params.id)
     const task = request.body.message
-    client.query('UPDATE tasks SET task = $1 WHERE id = $2 RETURNING *', [task, id], (error, result) => {
+    const done = request.body.done ? request.body.done : false
+    client.query('UPDATE tasks SET task = $1, done = $2 WHERE id = $3 RETURNING *', [task, done, id], (error, result) => {
         if (error) {
             throw error
         }
